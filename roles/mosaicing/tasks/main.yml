@@ -1,0 +1,11 @@
+- name: Install gdal-bin
+  apt: pkg=gdal-bin update_cache=yes state=latest
+
+- name: Install python-gdal
+  apt: pkg=python-gdal
+
+- name: Install s3cmd
+  apt: pkg=s3cmd
+
+- name: Copy over s3cmd configuration
+  template: src=s3cfg.j2 dest=/home/ubuntu/.s3cfg

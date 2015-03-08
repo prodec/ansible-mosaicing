@@ -1,0 +1,10 @@
+---
+- hosts: all
+  user: ubuntu
+  sudo: yes
+  vars_files:
+    - vars/defaults.yml
+    
+  roles:
+    - mosaicing
+
